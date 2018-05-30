@@ -1,11 +1,12 @@
-const key = 'EEMd66MUcyYPmsNblizFGk5c4y2t1816MJ0BMgxU';
-const images = [];
+const key = 'EEMd66MUcyYPmsNblizFGk5c4y2t1816MJ0BMgxU'; //key for nasa api
+const images = []; // empty array that will hold images
 
 // Elements
-const links = document.querySelectorAll('.camera-link');
-const imagesContainer = document.querySelector('.images');
+const links = document.querySelectorAll('.camera-link'); // get all the links
+const imagesContainer = document.querySelector('.images'); //get container to hold images to insert html
 
 // Functions
+/* This function is to either display the error message if there are no images for the selected day */
 const displayImages = images => {
   if (images.length === 0) {
     return (imagesContainer.innerHTML =
@@ -23,6 +24,7 @@ const displayImages = images => {
     .join('');
 };
 
+/* This is the function for the nasa api fetch */
 const getPhotos = camera => {
   fetch(
     `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=${camera}&api_key=${key}`
