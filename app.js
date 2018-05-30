@@ -1,4 +1,5 @@
 const key = 'EEMd66MUcyYPmsNblizFGk5c4y2t1816MJ0BMgxU'; //key for nasa api
+const sol = 1000;
 
 // Elements
 const links = document.querySelectorAll('.camera-link'); // get all the links
@@ -25,7 +26,7 @@ const displayImages = images => {
 
 /* This is the function for the nasa api fetch */
 const getPhotos = camera => {
-  const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=${camera}&api_key=${key}`;
+  const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=${sol}&camera=${camera}&api_key=${key}`;
 
   fetch(url)
     .then(res => res.json())
