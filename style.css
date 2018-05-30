@@ -28,7 +28,7 @@ main {
   height: 500px;
 }
 
-.camera-list {
+.camera {
   height: 100%;
   width: 33%;
   max-width: 33%;
@@ -43,7 +43,15 @@ main {
   flex-direction: column;
 }
 
-.camera-list .camera-item {
+.camera-list {
+  margin-left: 25px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.camera .camera-item {
   flex: 1;
 }
 

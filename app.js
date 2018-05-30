@@ -1,5 +1,4 @@
 const key = 'EEMd66MUcyYPmsNblizFGk5c4y2t1816MJ0BMgxU'; //key for nasa api
-const images = []; // empty array that will hold images
 
 // Elements
 const links = document.querySelectorAll('.camera-link'); // get all the links
