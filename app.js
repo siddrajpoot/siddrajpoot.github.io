@@ -25,9 +25,9 @@ const displayImages = images => {
 
 /* This is the function for the nasa api fetch */
 const getPhotos = camera => {
-  fetch(
-    `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=${camera}&api_key=${key}`
-  )
+  const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=${camera}&api_key=${key}`;
+
+  fetch(url)
     .then(res => res.json())
     .then(data => {
       displayImages(data.photos);
